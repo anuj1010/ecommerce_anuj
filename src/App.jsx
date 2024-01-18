@@ -7,6 +7,7 @@ import ShopCategory from "./Pages/ShopCategory";
 import LoginSignup from "./Pages/LoginSignup";
 import Cart from "./Pages/Cart";
 import Product from "./Pages/Product";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,6 +26,7 @@ function App() {
           <Route path=":productID" element={<Product />} />
         </Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
