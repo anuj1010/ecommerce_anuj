@@ -9,7 +9,7 @@ import RelatedProducts from "../Components/RelatedProducts/RelatedProducts";
 
 const Product = () => {
   const contextData = useContext(ShopContext);
-  const allProducts = contextData.shopCategoryData;
+  const allProducts = contextData.allProducts;
   const { productID } = useParams();
 
   const product = allProducts.filter((val) => {
@@ -18,7 +18,7 @@ const Product = () => {
     }
   });
 
-  console.log(product);
+  // console.log(product);
   return (
     <>
       <BreadCrum product={product} />

@@ -6,7 +6,7 @@ import "./CSS/ShopCategory.css";
 
 const ShopCategory = ({ Category, Banner }) => {
   const contextData = useContext(ShopContext);
-  const allProducts = contextData.shopCategoryData;
+  const allProducts = contextData.allProducts;
 
   return (
     <div className="shopCategory">
