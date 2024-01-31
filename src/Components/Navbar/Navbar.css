@@ -1,67 +1,165 @@
-.navBar{
-    display: flex;
-    justify-content: space-around;
-    padding: 8px;
-    box-shadow: 0 1px 3px -2px black;
-    height: 64px;
+.navBar {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px;
+  box-shadow: 0 1px 3px -2px black;
+  height: 64px;
+  align-items: center;
 }
-.navLogo{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
+.navLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.navMenu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 50px;
-    font-size: 18px;
-    font-weight: 500;
+.navMenu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  font-size: 18px;
+  font-weight: 500;
 }
-.navMenu li{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    gap:3px;
+.navMenu li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 3px;
 }
-.navMenu hr{
-    border:none;
-    width: 80%;
-    height: 3px;
-    border-radius: 10px;
-    background-color:#FF4141;
+.navMenu hr {
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #ff4141;
 }
-.nav-login-cart{
-    display: flex;
-    align-items: center;
-    gap:45px;
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 45px;
 }
-.nav-login-cart button{
-    width: 137px;
-    height: 48px;
-    border:1px solid #7a7a7a;
-    color:#515151;
-    border-radius: 75px;
-    cursor: pointer;
-    background-color: white;
-    font-size: 18px;
-    font-weight: 500;
+.nav-login-cart button {
+  width: 137px;
+  height: 48px;
+  border: 1px solid #7a7a7a;
+  color: #515151;
+  border-radius: 75px;
+  cursor: pointer;
+  background-color: white;
+  font-size: 18px;
+  font-weight: 500;
 }
-.nav-login-cart button:active{
-    background-color: #f3f3f3;
+.nav-login-cart button:active {
+  background-color: #f3f3f3;
 }
-.nav-cart-count{
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -35px;
-    margin-left: -55px;
-    border-radius: 11px;
+.nav-cart-count {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -35px;
+  margin-left: -55px;
+  border-radius: 11px;
+  font-size: 12px;
+  background-color: red;
+  color: white;
+}
+.navDropDown {
+  display: none;
+}
+
+@media (max-width: 1270px) {
+  .navBar {
+    padding: 12px 50px;
+  }
+  .navLogo {
+    width: 170px;
+  }
+  .navMenu {
+    gap: 30px;
+    font-size: 16px;
+  }
+  .nav-login-cart {
+    gap: 30px;
+  }
+  .nav-login-cart button {
+    width: 120px;
+    height: 45px;
+    font-size: 16px;
+  }
+  .nav-cart-count {
+    margin-left: -40px;
     font-size: 12px;
-    background-color: red;
-    color:white;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navBar {
+    padding: 12px 30px;
+  }
+  .navMenu {
+    gap: 25px;
+    font-size: 14px;
+  }
+  .nav-login-cart button {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .nav-login-cart img {
+    width: 30px;
+  }
+  .nav-cart-count {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .navBar {
+    padding: 10px 0px;
+  }
+  .navDropDown {
+    display: block;
+    width: 35px;
+    height: 35px;
+    rotate: 0deg;
+    transition: 0.5s;
+  }
+  .navMenu {
+    display: none;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    justify-content: center;
+    top: 61px;
+  }
+  .navMenuVisible {
+    display: flex;
+  }
+  .navDropDown.open {
+    transform: rotate(90deg);
+    transition: 0.5s;
+  }
+}
+@media (max-width: 500px) {
+  .navBar {
+    padding: 8px 0px;
+    gap: 0;
+  }
+  .navLogo {
+    width: 105px;
+  }
+  .navDropDown {
+    width: 30px;
+    height: 30px;
+  }
+  .navMenu {
+    height: 50px;
+  }
+  .nav-login-cart {
+    transform: scale(0.8);
+  }
 }
