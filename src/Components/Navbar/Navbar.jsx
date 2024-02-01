@@ -4,7 +4,7 @@ import logo from "../Assets/logo.png";
 import cartIcon from "../Assets/cart_icon.png";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
-import DropDownIcon from "../Assets/dropdown_icon.png";
+import DropDownIcon from "../Assets/dropDownMenu.png";
 
 export const Navbar = () => {
   const [active, setActive] = useState("shop");
