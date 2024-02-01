@@ -130,6 +130,7 @@
 @media (max-width: 500px) {
   .hero {
     flex-direction: column;
+    height: 80vh;
   }
   .heroRight {
     display: none;
